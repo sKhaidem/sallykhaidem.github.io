@@ -1,100 +1,188 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <title>Sally Khaidem</title>
-
-    <meta name="author" content="Sally Khaidem">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <title>Sally Khaidem</title>
     
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary-color: #1b1f23;
+        --accent-color: #3e90ff;
+        --bg-light: #E8F5E9; /* page background */
+        --bg-card: #F9F9F9; /* very light grey for boxes */
+        --hover-card: #E5E5E5; /* slightly darker on hover */
+        --text-dark: #24292e;
+        --text-light: #6a737d;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--bg-light);
+        color: var(--text-dark);
+        line-height: 1.6;
+        padding: 20px;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background: var(--bg-card);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        margin-bottom: 30px;
+      }
+      header img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        transition: transform 0.3s;
+      }
+      header img:hover {
+        transform: scale(1.05);
+      }
+      header .info {
+        flex: 1;
+      }
+      .name {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--primary-color);
+      }
+      .subtitle {
+        margin-top: 8px;
+        color: var(--text-light);
+      }
+      .links {
+        margin-top: 12px;
+      }
+      .links a {
+        text-decoration: none;
+        color: var(--accent-color);
+        font-weight: 600;
+        margin-right: 12px;
+      }
+      section {
+        background: var(--bg-card);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        margin-bottom: 30px;
+      }
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: var(--primary-color);
+      }
+      .highlight {
+        background-color: var(--accent-color);
+        color: #fff;
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+      .project {
+        display: flex;
+        gap: 16px;
+        padding: 16px;
+        border-radius: 8px;
+        background: var(--bg-card);
+        transition: background 0.3s;
+      }
+      .project:hover {
+        background: var(--hover-card);
+      }
+      .project video,
+      .project img {
+        width: 160px;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+      .project-content {
+        flex: 1;
+      }
+      .project-content .papertitle {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--accent-color);
+        text-decoration: none;
+      }
+      .project-content p {
+        margin-top: 8px;
+        color: var(--text-dark);
+      }
+      .project-content a {
+        color: var(--accent-color);
+        text-decoration: none;
+      }
+      @media (max-width: 600px) {
+        header {
+          flex-direction: column;
+          text-align: center;
+        }
+        .project {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
   </head>
-
   <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Sally Khaidem
-                </p>
-                <p>
-                  I am a Research Scholar in the <a href="https://www.ee.iitm.ac.in/">Department of Electrical Engineering, IIT Madras</a>, working under the guidance of Prof. Kaushik Mitra and Dr. Mansi Sharma. I earned my M.Tech in VLSI and Embedded Systems Design (2020) from the <a href="https://www.nitmanipur.ac.in/Deptindex.aspx?page=a&ItemID=ce&nDeptID=o/">Department of Electronics and Communication Engineering at NIT Manipur</a>, where I was mentored by Dr. Surajkumar Loitongbam and Dr. Keisham Pritamda. Prior to that, I completed my Bachelor of Engineering in <a href="https://bmsce.ac.in/home/Electronics-and-Communication-Engineering-About">Electronics and Communication at B.M.S. College of Engineering</a>, Bengaluru (2017).
-                </p>
-
-                <p style="text-align:center">
-                  <a href="mailto:jonbarron@gmail.com">Email</a> &nbsp;/&nbsp;
-                  <a href="https://scholar.google.com/citations?hl=en&user=jktWnL8AAAAJ">Scholar</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/jonbarron/">Github</a>
-                </p>
-              </td>
-              <td style="padding:2.5%;width:37%;max-width:37%">
-                <a href="images/JonBarron.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/JonBarron.jpg" class="hoverZoomLink"></a>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Research</h2>
-                <p>
-                  I'm interested in computer vision, deep learning, generative AI, and image processing. Most of my research is about inferring the physical world (shape, motion, color, light, etc) from images, usually with radiance fields. Some papers are <span class="highlight">highlighted</span>.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-
-    <tr onmouseout="cat4d_stop()" onmouseover="cat4d_start()" bgcolor="#ffffd0">
-      <td style="padding:16px;width:20%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='cat4d_image'><video  width=100% height=100% muted autoplay loop>
-          <source src="images/cat4d.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </video></div>
-          <img src='images/cat4d.jpg' width="160">
+    <div class="container">
+      <header>
+        <img src="images/JonBarron.jpg" alt="Sally Khaidem">
+        <div class="info">
+          <p class="name">Sally Khaidem</p>
+          <p class="subtitle">Research Scholar, Dept. of Electrical Engineering, IIT Madras</p>
+          <div class="links">
+            <a href="mailto:jonbarron@gmail.com">Email</a>
+            <a href="https://scholar.google.com/citations?hl=en&user=jktWnL8AAAAJ">Scholar</a>
+            <a href="https://github.com/jonbarron/">GitHub</a>
+          </div>
         </div>
-        <script type="text/javascript">
-          function cat4d_start() {
-            document.getElementById('cat4d_image').style.opacity = "1";
-          }
+      </header>
 
-          function cat4d_stop() {
-            document.getElementById('cat4d_image').style.opacity = "0";
-          }
-          cat4d_stop()
-        </script>
-      </td>
-      <td style="padding:8px;width:80%;vertical-align:middle">
-        <a href="https://cat-4d.github.io/">
-			<span class="papertitle">CAT4D: Create Anything in 4D with Multi-View Video Diffusion Models
-</span>
-        </a>
-        <br>
-				<a href="https://www.cs.columbia.edu/~rundi/">Rundi Wu</a>,
-				<a href="https://ruiqigao.github.io/">Ruiqi Gao</a>,
-				<a href="https://poolio.github.io/">Ben Poole</a>,
-				<a href="https://alextrevithick.github.io/">Alex Trevithick</a>,
-				<a href="https://www.cs.columbia.edu/~cxz/index.htm/">Changxi Zheng</a>,
-				<strong>Jonathan T. Barron</strong>,
-				<a href="https://holynski.org/">Aleksander Holynski</a>
-        <br>
-        <em>CVPR</em>, 2025 &nbsp <font color="red"><strong>(Oral Presentation)</strong></font>
-        <br>
-        <a href="https://cat-4d.github.io/">project page</a>
-        /
-        <a href="https://arxiv.org/abs/2411.18613">arXiv</a>
-        <p></p>
-        <p>
-				An approach for turning a video into a 4D radiance field that can be rendered in real-time. When combined with a text-to-video model, this enables text-to-4D.
-        </p>
-      </td>
-    </tr>
-    </table>
+      <section>
+        <h2>About Me</h2>
+        <p>I earned my <strong>M.Tech</strong> in VLSI and Embedded Systems Design (2020) from NIT Manipur, and my <strong>B.E.</strong> in Electronics and Communication (2017) from B.M.S College of Engineering, Bengaluru. Currently, I work under the guidance of Prof. Kaushik Mitra &amp; Dr. Mansi Sharma.</p>
+      </section>
+
+      <section>
+        <h2>Research Interests</h2>
+        <p>I'm interested in computer vision, deep learning, generative AI, and image processing. My work focuses on inferring the physical world (shape, motion, color, light) from images, often using radiance fields. Some papers are <span class="highlight">highlighted</span>.</p>
+      </section>
+
+      <section>
+        <h2>Selected Works</h2>
+        <div class="project">
+          <div class="media">
+            <video muted autoplay loop>
+              <source src="images/cat4d.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="project-content">
+            <a href="https://cat-4d.github.io/" class="papertitle">CAT4D: Create Anything in 4D with Multi-View Video Diffusion Models</a>
+            <p><em>CVPR, 2025</em> <strong style="color:#d73a49;">(Oral)</strong></p>
+            <p>An approach for turning a video into a 4D radiance field that can be rendered in real-time. When combined with a text-to-video model, this enables text-to-4D.</p>
+            <p>
+              <a href="https://cat-4d.github.io/">Project</a> |
+              <a href="https://arxiv.org/abs/2411.18613">arXiv</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>
