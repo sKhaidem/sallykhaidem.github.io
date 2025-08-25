@@ -11,13 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Meetei+Mayek&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
+
     <style>
       :root {
         --primary-color: #1b1f23;
         --accent-color: #3e90ff;
-        --bg-light: #E8F5E9; /* page background */
-        --bg-card: #F9F9F9; /* very light grey for boxes */
-        --hover-card: #E5E5E5; /* slightly darker on hover */
+        --bg-light: #E8F5E9;
+        --bg-card: #F9F9F9;
+        --hover-card: #E5E5E5;
         --text-dark: #24292e;
         --text-light: #6a737d;
       }
@@ -27,21 +28,34 @@
         padding: 0;
       }
       body {
+        position: relative;
         font-family: 'Inter', sans-serif;
         background-color: var(--bg-light);
         color: var(--text-dark);
         line-height: 1.6;
         padding: 20px;
       }
-/*       .container {
-        max-width: 800px;
+
+      /* --- Watermark --- */
+      .watermark {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 400px;        /* 🔧 change size here */
+        height: 400px;       /* 🔧 change size here */
+        background: url("images/sangai.png") no-repeat center;
+        background-size: contain;
+        opacity: 0.08;       /* 🔧 change transparency here */
+        transform: translate(-50%, -50%);
+        z-index: -1;         /* ensures it's behind content */
+        pointer-events: none;
+      }
+
+      .container {
+        max-width: 1000px;
+        width: 100%;
         margin: 0 auto;
-      } */
-.container {
-  max-width: 1000px;  /* increase from 800 → 1200 */
-  width: 100%;        /* allow it to stretch if the screen is smaller than 1200px */
-  margin: 0 auto;
-}
+      }
       header {
         display: flex;
         align-items: center;
@@ -58,7 +72,7 @@
         border-radius: 50%;
         object-fit: cover;
         transition: transform 0.3s;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 1); /* added shadow */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
       }
       header img:hover {
         transform: scale(1.1);
@@ -95,12 +109,6 @@
         font-size: 1.5rem;
         margin-bottom: 10px;
         color: var(--primary-color);
-      }
-      .highlight {
-        background-color: var(--accent-color);
-        color: #fff;
-        padding: 2px 6px;
-        border-radius: 4px;
       }
       .project {
         display: flex;
@@ -146,7 +154,7 @@
           align-items: center;
         }
       }
-          section p {
+      section p {
         text-align: justify;
       }
       .name-box {
@@ -158,6 +166,9 @@
     </style>
   </head>
   <body>
+    <!-- Watermark -->
+    <div class="watermark"></div>
+
     <div class="container">
       <header>
         <img src="images/sally.jpeg" alt="Sally Khaidem">
