@@ -17,8 +17,6 @@
         --primary-color: #1b1f23;
         --accent-color: #3e90ff;
         --bg-light: #E8F5E9;
-        --bg-card: #F9F9F9;
-        --hover-card: #E5E5E5;
         --text-dark: #24292e;
         --text-light: #6a737d;
       }
@@ -41,13 +39,13 @@
         position: fixed;
         top: 50%;
         left: 50%;
-        width: 400px;        /* 🔧 change size here */
-        height: 400px;       /* 🔧 change size here */
+        width: 400px;        /* 🔧 change size */
+        height: 400px;       /* 🔧 change size */
         background: url("images/sangai.png") no-repeat center;
         background-size: contain;
-        opacity: 0.08;       /* 🔧 change transparency here */
+        opacity: 0.08;       /* 🔧 change transparency */
         transform: translate(-50%, -50%);
-        z-index: -1;         /* ensures it's behind content */
+        z-index: -1;         /* keep behind content */
         pointer-events: none;
       }
 
@@ -60,7 +58,7 @@
         display: flex;
         align-items: center;
         gap: 20px;
-        background: #eeeeee;
+        background: rgba(238, 238, 238, 0.9); /* 🔧 header transparency */
         padding: 20px;
         border-radius: 12px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.05);
@@ -98,8 +96,10 @@
         font-weight: 600;
         margin-right: 12px;
       }
+
+      /* --- Transparent sections --- */
       section {
-        background: var(--bg-card);
+        background: rgba(249, 249, 249, 0.8); /* 🔧 section transparency */
         padding: 20px;
         border-radius: 12px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.05);
@@ -110,16 +110,17 @@
         margin-bottom: 10px;
         color: var(--primary-color);
       }
+
       .project {
         display: flex;
         gap: 16px;
         padding: 16px;
         border-radius: 8px;
-        background: var(--bg-card);
+        background: rgba(249, 249, 249, 0.7); /* 🔧 project box transparency */
         transition: background 0.3s;
       }
       .project:hover {
-        background: var(--hover-card);
+        background: rgba(229, 229, 229, 0.8);
       }
       .project video,
       .project img {
@@ -144,6 +145,7 @@
         color: var(--accent-color);
         text-decoration: none;
       }
+
       @media (max-width: 600px) {
         header {
           flex-direction: column;
@@ -154,11 +156,12 @@
           align-items: center;
         }
       }
+
       section p {
         text-align: justify;
       }
       .name-box {
-        background: #f0f4ff;
+        background: rgba(240, 244, 255, 0.9); /* 🔧 name box transparency */
         padding: 20px;
         border-radius: 12px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -184,7 +187,7 @@
             <a href="https://scholar.google.com/citations?user=jx_fc4YAAAAJ&hl=en&authuser=1">Scholar</a>
             <a href="https://www.linkedin.com/in/sally-khaidem-7914b257/">LinkedIn</a>
             <a href="https://orcid.org/my-orcid?orcid=0000-0001-5262-6724">ORCID</a>
-            <a href="https://raw.githubusercontent.com/sKhaidem/sallykhaidem.github.io/main/images/CV.pdf"target="_blank"rel="noopener">CV</a>
+            <a href="https://raw.githubusercontent.com/sKhaidem/sallykhaidem.github.io/main/images/CV.pdf" target="_blank" rel="noopener">CV</a>
           </div>
         </div>
       </header>
