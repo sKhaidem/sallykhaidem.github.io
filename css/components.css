@@ -611,9 +611,17 @@ footer{
 
 /* ==========================================================
    Fade Animation
+   Content is visible by default. The reveal animation only
+   applies once JS has confirmed it's running (html.js) — if
+   JS fails to load for any reason, everything stays visible.
    ========================================================== */
 
 .fade-up{
+    opacity:1;
+    transform:none;
+}
+
+html.js .fade-up{
 
     opacity:0;
 
@@ -623,7 +631,7 @@ footer{
 
 }
 
-.fade-up.show{
+html.js .fade-up.show{
 
     opacity:1;
 
