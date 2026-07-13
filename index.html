@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sally Khaidem — Learning-Based Visual Sensing for Intelligent Perception</title>
+  <meta name="description" content="Sally Khaidem is a PhD researcher at IIT Madras working on event-based vision, computational imaging, and neural rendering.">
+  <link rel="icon" href="images/sangai.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    /* ----------------------------------------------------------
+       Page-specific additions (kept minimal; everything else
+       comes from style.css / components.css / responsive.css)
+    ---------------------------------------------------------- */
+
+    .hero-name{
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      letter-spacing: .02em;
+    }
+
+    .pipeline{
+      display:flex;
+      align-items:center;
+      flex-wrap:wrap;
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+    .pipeline-step{
+      color: var(--text-primary);
+      font-weight: 600;
+      font-size: .95rem;
+    }
+    .pipeline-arrow{
+      color: var(--accent);
+      font-weight: 400;
+    }
+
+    .publication-links a{
+      font-size: .9rem;
+      font-weight: 600;
+    }
+    .publication-links span.sep{
+      color: var(--text-secondary);
+      opacity: .5;
+    }
+
+    .current-research-list{
+      display:flex;
+      flex-direction:column;
+      gap: 1.75rem;
+    }
+    .current-research-item h3{
+      margin-bottom: .35rem;
+    }
+    .current-research-item p{
+      max-width: none;
+    }
+
+    @media (max-width:1024px){
+      .pipeline{ gap:.6rem; }
+      .pipeline-step{ font-size:.85rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Sally Khaidem</a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="biography.html">Biography</a>
+        <a href="cv.html">CV</a>
+      </nav>
+
+      <div class="menu-toggle" role="button" aria-label="Toggle menu" aria-expanded="false" tabindex="0">&#9776;</div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero">
+    <div class="container grid grid-center">
+
+      <div class="col-4 flex-center">
+        <div class="hero-photo">
+          <img src="images/sally.jpeg" alt="Portrait of Sally Khaidem">
+        </div>
+      </div>
+
+      <div class="col-8 hero-content">
+        <p class="hero-name">Sally Khaidem</p>
+
+        <h1 class="hero-title">Learning-Based Visual Sensing for Intelligent Perception</h1>
+
+        <p class="hero-description">
+          I develop computational methods that take visual data from capture through to
+          understanding &mdash; combining novel sensing modalities with learning-based
+          computer vision for robust perception in challenging real-world environments.
+        </p>
+
+        <p class="hero-affiliation">
+          PhD Candidate, Department of Electrical Engineering<br>
+          Indian Institute of Technology Madras
+        </p>
+
+        <div class="button-group">
+          <a href="mailto:khaidemsally@gmail.com" class="btn btn-primary">Email</a>
+          <a href="https://scholar.google.com/citations?user=jx_fc4YAAAAJ&hl=en&authuser=1" class="btn btn-secondary" target="_blank" rel="noopener">Scholar</a>
+          <a href="https://github.com/sKhaidem" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/sally-khaidem-7914b257/" class="btn btn-secondary" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="cv.html" class="btn btn-secondary">CV</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       RESEARCH VISION
+  ============================================================ -->
+  <section id="research-vision">
+    <div class="container fade-up">
+
+      <div class="section-header">
+        <p class="section-eyebrow" style="color:var(--accent); font-weight:600; margin-bottom:.75rem;">Research Vision</p>
+        <h2 class="section-title">From Capture to Understanding: Learning-Based Visual Sensing for Intelligent Perception</h2>
+      </div>
+
+      <div class="tag-group">
+        <span class="tag">Event-Based Vision</span>
+        <span class="tag">Computational Imaging</span>
+        <span class="tag">Neural Rendering</span>
+        <span class="tag">3D Gaussian Splatting</span>
+        <span class="tag">Vision Foundation Models</span>
+      </div>
+
+      <p class="reading" style="margin-top:2rem;">
+        My research explores the complete visual information pipeline, from image capture and
+        representation to reconstruction, neural rendering and scene understanding. By combining
+        novel sensing modalities with learning-based computer vision, I develop computational
+        methods for robust visual perception in challenging real-world environments.
+      </p>
+
+      <div class="pipeline">
+        <span class="pipeline-step">Capture</span>
+        <span class="pipeline-arrow">&rarr;</span>
+        <span class="pipeline-step">Representation</span>
+        <span class="pipeline-arrow">&rarr;</span>
+        <span class="pipeline-step">Compression</span>
+        <span class="pipeline-arrow">&rarr;</span>
+        <span class="pipeline-step">Reconstruction</span>
+        <span class="pipeline-arrow">&rarr;</span>
+        <span class="pipeline-step">Rendering</span>
+        <span class="pipeline-arrow">&rarr;</span>
+        <span class="pipeline-step">Understanding</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       RESEARCH THEMES
+  ============================================================ -->
+  <section id="research-themes">
+    <div class="container fade-up">
+
+      <div class="section-header">
+        <p class="section-eyebrow" style="color:var(--accent); font-weight:600; margin-bottom:.75rem;">Research Themes</p>
+        <h2 class="section-title">Problems I work on</h2>
+        <p class="section-subtitle">Four connected research problems, spanning sensing to scene understanding.</p>
+      </div>
+
+      <div class="card-grid">
+
+        <div class="theme-card glass-card">
+          <h3>Novel Visual Sensing</h3>
+          <p>Conventional cameras struggle under motion blur, low light and high dynamic range. I work on event cameras and hybrid sensing modalities that capture visual information conventional sensors miss.</p>
+        </div>
+
+        <div class="theme-card glass-card">
+          <h3>Computational Imaging</h3>
+          <p>Raw sensor data is rarely usable directly. I design representations and reconstruction pipelines that recover high-quality visual signals from sparse, noisy or unconventional capture.</p>
+        </div>
+
+        <div class="theme-card glass-card">
+          <h3>Neural Rendering</h3>
+          <p>Turning captured and reconstructed data into renderable 3D scenes. I work with NeRF and 3D Gaussian Splatting to synthesize novel views, guided by event and multimodal cues.</p>
+        </div>
+
+        <div class="theme-card glass-card">
+          <h3>Intelligent Visual Perception</h3>
+          <p>The end goal of the pipeline is understanding. I study how vision foundation models and learned representations support robust, generalizable scene understanding.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FEATURED PUBLICATIONS
+  ============================================================ -->
+  <section id="featured-publications">
+    <div class="container fade-up">
+
+      <div class="section-header">
+        <p class="section-eyebrow" style="color:var(--accent); font-weight:600; margin-bottom:.75rem;">Featured Publications</p>
+        <h2 class="section-title">Selected work</h2>
+        <p class="section-subtitle">One representative paper from each research theme.</p>
+      </div>
+
+      <div class="publication-grid">
+
+        <div class="publication-card glass-card">
+          <div class="publication-image">
+            <img src="images/vcip.png" alt="Thumbnail for VCIP 2025 paper">
+          </div>
+          <span class="venue">Event-Based Vision &middot; VCIP 2025</span>
+          <h3>Towards Efficient Neuromorphic Data Processing</h3>
+          <p>A lossless spatio-temporal compression scheme for event data using a voxelized representation and context-adaptive entropy coding.</p>
+          <div class="publication-links">
+            <a href="#">Paper</a>
+            <span class="sep">/</span>
+            <a href="#">Code</a>
+          </div>
+        </div>
+
+        <div class="publication-card glass-card">
+          <div class="publication-image">
+            <img src="images/access.png" alt="Thumbnail for IEEE Access 2025 paper">
+          </div>
+          <span class="venue">Neural Rendering &middot; IEEE Access 2025</span>
+          <h3>Blur to Brilliance</h3>
+          <p>Event-guided deblurring and HDR novel view synthesis, combining NeRF and 3D Gaussian Splatting.</p>
+          <div class="publication-links">
+            <a href="#">Paper</a>
+            <span class="sep">/</span>
+            <a href="#">Code</a>
+          </div>
+        </div>
+
+        <div class="publication-card glass-card">
+          <div class="publication-image">
+            <img src="images/BMVC.png" alt="Thumbnail for BMVC 2024 paper">
+          </div>
+          <span class="venue">Light-Field Imaging &middot; BMVC 2024</span>
+          <h3>Scalable Compression of Light Field Data</h3>
+          <p>A Deep Belief Network approach to compressing light-field data for auto-stereoscopic displays.</p>
+          <div class="publication-links">
+            <a href="#">Paper</a>
+            <span class="sep">/</span>
+            <a href="#">Code</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-lg">
+        <a href="publications.html" class="btn btn-secondary">All publications</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CURRENT RESEARCH
+  ============================================================ -->
+  <section id="current-research">
+    <div class="container fade-up">
+
+      <div class="section-header">
+        <p class="section-eyebrow" style="color:var(--accent); font-weight:600; margin-bottom:.75rem;">Current Research</p>
+        <h2 class="section-title">Where this is heading</h2>
+      </div>
+
+      <div class="glass-card current-research-list">
+
+        <div class="current-research-item">
+          <h3>Drone-Based Multimodal Wildlife Monitoring</h3>
+          <p>With IIT Madras and ICMR&ndash;National Institute of Epidemiology &mdash; multimodal computer vision using synchronized RGB and thermal aerial imagery for wildlife detection, counting and behavioural monitoring.</p>
+        </div>
+
+        <div class="current-research-item">
+          <h3>Event-Guided Novel View Synthesis and 4D Panoptic Segmentation</h3>
+          <p>Extending event-guided NeRF and 3D Gaussian Splatting toward dynamic scene understanding.</p>
+        </div>
+
+      </div>
+
+      <div class="tag-group">
+        <span class="tag">Event-Guided Neural Rendering</span>
+        <span class="tag">Vision Foundation Models</span>
+        <span class="tag">Event-Based Scene Understanding</span>
+        <span class="tag">3D Gaussian Splatting</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+  ============================================================ -->
+  <section id="contact">
+    <div class="container fade-up">
+      <div class="glass-card contact-card">
+        <h2>Interested in collaboration?</h2>
+        <p style="margin-inline:auto;">I'm on the postdoctoral and industrial research job market for 2026.</p>
+
+        <div class="contact-links">
+          <a href="mailto:khaidemsally@gmail.com" class="btn btn-primary">Email</a>
+          <a href="https://scholar.google.com/citations?user=jx_fc4YAAAAJ&hl=en&authuser=1" class="btn btn-secondary" target="_blank" rel="noopener">Scholar</a>
+          <a href="https://github.com/sKhaidem" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/sally-khaidem-7914b257/" class="btn btn-secondary" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2026 Sally Khaidem</p>
+      <div class="footer-links">
+        <a href="mailto:khaidemsally@gmail.com">Email</a>
+        <a href="https://scholar.google.com/citations?user=jx_fc4YAAAAJ&hl=en&authuser=1" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://github.com/sKhaidem" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/sally-khaidem-7914b257/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
