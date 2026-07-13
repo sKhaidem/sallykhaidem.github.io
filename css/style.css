@@ -3,15 +3,18 @@
    Global Design System
    ========================================================== */
 
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+/* ----------------------------------------------------------
+   Google Font
+---------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 
 /* ==========================================================
-   CSS Variables
+   CSS VARIABLES
    ========================================================== */
 
-:root {
+:root{
 
     /* ---------- Layout ---------- */
 
@@ -20,7 +23,7 @@
     --reading-width: 720px;
 
 
-    /* ---------- Spacing ---------- */
+    /* ---------- Spacing (8pt System) ---------- */
 
     --space-xs: 0.5rem;      /* 8px */
     --space-sm: 1rem;        /* 16px */
@@ -35,75 +38,92 @@
 
     --font-family: "Inter", sans-serif;
 
-    --fs-hero: clamp(2.8rem, 5vw, 4rem);
-    --fs-h1: clamp(2.3rem, 4vw, 3rem);
-    --fs-h2: clamp(1.9rem, 3vw, 2.3rem);
-    --fs-h3: clamp(1.3rem, 2vw, 1.5rem);
+    --fs-hero: clamp(3rem,6vw,4.5rem);
+    --fs-h1: clamp(2.5rem,5vw,3.4rem);
+    --fs-h2: clamp(2rem,4vw,2.6rem);
+    --fs-h3: clamp(1.35rem,2vw,1.6rem);
 
     --fs-body: 1.125rem;
-    --fs-small: 0.95rem;
+    --fs-small: .95rem;
 
     --line-height: 1.75;
 
 
     /* ---------- Colors ---------- */
 
-    --background: #F7F9FC;
+    --background:#F7F9FC;
 
-    --text-primary: #1E293B;
-    --text-secondary: #64748B;
+    --text-primary:#1E293B;
+    --text-secondary:#64748B;
 
-    --accent: #4F7DF3;
-    --accent-hover: #2563EB;
+    --accent:#4F7DF3;
+    --accent-hover:#2563EB;
 
-    /* Semantic Pastels */
-
-    --research: rgba(79,125,243,.10);
-    --publication: rgba(183,148,246,.10);
-    --project: rgba(52,211,153,.10);
-    --bio: rgba(251,191,36,.10);
+    --white:#FFFFFF;
 
 
-    /* ---------- Glass Cards ---------- */
+    /* ---------- Semantic Pastels ---------- */
 
-    --glass-bg: rgba(255,255,255,.60);
+    --research:rgba(79,125,243,.10);
 
-    --glass-border: rgba(255,255,255,.70);
+    --publication:rgba(183,148,246,.10);
 
-    --glass-shadow:
+    --project:rgba(52,211,153,.10);
+
+    --bio:rgba(251,191,36,.10);
+
+    --contact:rgba(251,113,133,.10);
+
+
+    /* ---------- Glass ---------- */
+
+    --glass-bg:rgba(255,255,255,.60);
+
+    --glass-border:rgba(255,255,255,.72);
+
+    --glass-blur:blur(18px);
+
+
+    /* ---------- Elevation ---------- */
+
+    --elevation-1:
+        0 4px 12px rgba(15,23,42,.04);
+
+    --elevation-2:
         0 8px 30px rgba(15,23,42,.05);
 
-    --glass-shadow-hover:
+    --elevation-3:
         0 18px 45px rgba(15,23,42,.08);
-
-    --glass-blur: blur(18px);
 
 
     /* ---------- Radius ---------- */
 
-    --radius-sm: 10px;
-    --radius-md: 16px;
-    --radius-lg: 22px;
-    --radius-xl: 30px;
+    --radius-sm:10px;
+    --radius-md:16px;
+    --radius-lg:22px;
+    --radius-xl:30px;
 
 
     /* ---------- Transition ---------- */
 
-    --transition: .30s ease;
+    --transition:.30s ease;
 
 }
 
 
+
 /* ==========================================================
-   Reset
+   RESET
    ========================================================== */
 
 *,
 *::before,
 *::after{
+
     margin:0;
     padding:0;
     box-sizing:border-box;
+
 }
 
 html{
@@ -116,32 +136,50 @@ body{
 
     font-family:var(--font-family);
 
-    background:var(--background);
-
-    color:var(--text-primary);
+    font-size:var(--fs-body);
 
     line-height:var(--line-height);
 
-    font-size:var(--fs-body);
+    background:var(--background);
+
+    color:var(--text-primary);
 
     text-rendering:optimizeLegibility;
 
     -webkit-font-smoothing:antialiased;
 
+    overflow-x:hidden;
+
+}
+
+::selection{
+
+    background:var(--accent);
+
+    color:white;
+
 }
 
 
+
 /* ==========================================================
-   Typography
+   TYPOGRAPHY
    ========================================================== */
 
-h1,h2,h3,h4{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    color:var(--text-primary);
+
+    line-height:1.15;
 
     font-weight:700;
 
-    line-height:1.2;
-
-    color:var(--text-primary);
+    letter-spacing:-0.03em;
 
 }
 
@@ -163,13 +201,15 @@ h3{
 
     font-size:var(--fs-h3);
 
+    margin-bottom:var(--space-sm);
+
 }
 
 p{
 
-    max-width:var(--reading-width);
-
     color:var(--text-secondary);
+
+    max-width:var(--reading-width);
 
 }
 
@@ -181,16 +221,23 @@ strong{
 
 }
 
+small{
+
+    font-size:var(--fs-small);
+
+}
+
+
 
 /* ==========================================================
-   Links
+   LINKS
    ========================================================== */
 
 a{
 
-    color:var(--accent);
-
     text-decoration:none;
+
+    color:var(--accent);
 
     transition:var(--transition);
 
@@ -203,8 +250,9 @@ a:hover{
 }
 
 
+
 /* ==========================================================
-   Images
+   IMAGES
    ========================================================== */
 
 img{
@@ -213,27 +261,32 @@ img{
 
     max-width:100%;
 
+    height:auto;
+
 }
 
 
+
 /* ==========================================================
-   Lists
+   LISTS
    ========================================================== */
 
-ul{
+ul,
+ol{
 
     list-style:none;
 
 }
 
 
+
 /* ==========================================================
-   Layout
+   LAYOUT
    ========================================================== */
 
 .container{
 
-    width:min(100% - 2rem, var(--container-width));
+    width:min(calc(100% - 2rem),var(--container-width));
 
     margin-inline:auto;
 
@@ -241,7 +294,7 @@ ul{
 
 .content{
 
-    width:min(100%, var(--content-width));
+    width:min(100%,var(--content-width));
 
     margin-inline:auto;
 
@@ -260,8 +313,50 @@ section{
 }
 
 
+
 /* ==========================================================
-   Glass Card
+   12 COLUMN GRID
+   ========================================================== */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(12,minmax(0,1fr));
+
+    gap:2rem;
+
+}
+
+.grid-center{
+
+    align-items:center;
+
+}
+
+.grid-middle{
+
+    justify-items:center;
+
+}
+
+.col-1{grid-column:span 1;}
+.col-2{grid-column:span 2;}
+.col-3{grid-column:span 3;}
+.col-4{grid-column:span 4;}
+.col-5{grid-column:span 5;}
+.col-6{grid-column:span 6;}
+.col-7{grid-column:span 7;}
+.col-8{grid-column:span 8;}
+.col-9{grid-column:span 9;}
+.col-10{grid-column:span 10;}
+.col-11{grid-column:span 11;}
+.col-12{grid-column:span 12;}
+
+
+
+/* ==========================================================
+   GLASS CARD
    ========================================================== */
 
 .glass-card{
@@ -269,18 +364,17 @@ section{
     background:var(--glass-bg);
 
     backdrop-filter:var(--glass-blur);
-
     -webkit-backdrop-filter:var(--glass-blur);
 
     border:1px solid var(--glass-border);
 
     border-radius:var(--radius-lg);
 
-    box-shadow:var(--glass-shadow);
-
-    padding:2rem;
+    box-shadow:var(--elevation-2);
 
     transition:var(--transition);
+
+    padding:2rem;
 
 }
 
@@ -288,14 +382,31 @@ section{
 
     transform:translateY(-4px);
 
-    box-shadow:var(--glass-shadow-hover);
+    box-shadow:var(--elevation-3);
 
 }
 
 
+
 /* ==========================================================
-   Utility Classes
+   UTILITIES
    ========================================================== */
+
+.flex{
+
+    display:flex;
+
+}
+
+.flex-center{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
 
 .text-center{
 
@@ -309,56 +420,33 @@ section{
 
 }
 
-.flex{
-
-    display:flex;
-
-}
-
-.grid{
-
-    display:grid;
-
-}
-
 .hidden{
 
     display:none;
 
 }
 
-.mt-sm{
+.w-100{
 
-    margin-top:var(--space-sm);
-
-}
-
-.mt-md{
-
-    margin-top:var(--space-md);
+    width:100%;
 
 }
 
-.mt-lg{
+.mt-xs{margin-top:var(--space-xs);}
+.mt-sm{margin-top:var(--space-sm);}
+.mt-md{margin-top:var(--space-md);}
+.mt-lg{margin-top:var(--space-lg);}
+.mt-xl{margin-top:var(--space-xl);}
 
-    margin-top:var(--space-lg);
+.mb-xs{margin-bottom:var(--space-xs);}
+.mb-sm{margin-bottom:var(--space-sm);}
+.mb-md{margin-bottom:var(--space-md);}
+.mb-lg{margin-bottom:var(--space-lg);}
+.mb-xl{margin-bottom:var(--space-xl);}
 
-}
-
-.mb-sm{
-
-    margin-bottom:var(--space-sm);
-
-}
-
-.mb-md{
-
-    margin-bottom:var(--space-md);
-
-}
-
-.mb-lg{
-
-    margin-bottom:var(--space-lg);
-
+.pt-xl{padding-top:var(--space-xl);}
+.pb-xl{padding-bottom:var(--space-xl);}
+.py-xl{
+    padding-top:var(--space-xl);
+    padding-bottom:var(--space-xl);
 }
