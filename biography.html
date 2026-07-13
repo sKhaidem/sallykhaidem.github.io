@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biography — Sally Khaidem</title>
+  <meta name="description" content="Education, experience, awards and interests of Sally Khaidem, PhD researcher at IIT Madras.">
+  <link rel="icon" href="images/sangai.png" type="image/x-icon">
+  <script>document.documentElement.classList.add("js");</script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Meetei+Mayek&family=Noto+Sans+Bengali&family=Noto+Sans+Devanagari&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    /* ----------------------------------------------------------
+       Page-specific additions (same pattern as other pages)
+    ---------------------------------------------------------- */
+
+    .nav-links a.active{ color: var(--text-primary); }
+    .nav-links a.active::after{ transform: scaleX(1); }
+
+    .page-header{
+      padding-top: 160px;
+      padding-bottom: 1rem;
+    }
+    .page-eyebrow{
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: .75rem;
+    }
+    .page-title{
+      font-size: var(--fs-h1);
+      margin-bottom: 1.25rem;
+    }
+
+    .bio-name-plate{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: .6rem;
+      margin-bottom: 1.5rem;
+    }
+    .bio-name-plate .name-en{
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      letter-spacing: .02em;
+    }
+    .bio-name-plate .name-script{
+      font-size: .95rem;
+      color: var(--text-secondary);
+      opacity: .8;
+    }
+    .bio-name-plate [lang="mni-Mtei"]{ font-family: 'Noto Sans Meetei Mayek', sans-serif; }
+    .bio-name-plate [lang="bn"]{ font-family: 'Noto Sans Bengali', sans-serif; }
+    .bio-name-plate [lang="hi"]{ font-family: 'Noto Sans Devanagari', sans-serif; }
+
+    .theme-block{
+      margin-bottom: 2.5rem;
+    }
+    .theme-block-title{
+      font-size: 1.1rem;
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+      padding-bottom: .75rem;
+      border-bottom: 1px solid rgba(15,23,42,.08);
+    }
+
+    .entry{
+      padding: 1.25rem 0;
+      border-bottom: 1px solid rgba(15,23,42,.06);
+    }
+    .theme-block .entry:last-child{
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .entry-top{
+      display:flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: .25rem;
+    }
+    .entry-title{
+      color: var(--text-primary);
+      font-weight: 600;
+      font-size: 1.02rem;
+    }
+    .entry-meta{
+      font-size: .85rem;
+      color: var(--text-secondary);
+      white-space: nowrap;
+    }
+    .entry-sub{
+      font-size: .92rem;
+      color: var(--text-secondary);
+      font-style: italic;
+      margin-bottom: .4rem;
+    }
+    .entry p{
+      max-width: none;
+    }
+
+    .award-list{
+      display:flex;
+      flex-direction:column;
+      gap: 1rem;
+    }
+    .award-item{
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+    .award-item .award-meta{
+      color: var(--text-secondary);
+      font-weight: 400;
+      font-size: .92rem;
+    }
+
+    .languages-row{
+      margin-top: 1rem;
+      color: var(--text-secondary);
+      font-size: .95rem;
+    }
+    .languages-row strong{
+      color: var(--text-primary);
+    }
+
+    @media (max-width:768px){
+      .page-header{ padding-top:120px; }
+      .entry-top{ flex-direction:column; gap:.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Sally Khaidem</a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="biography.html" class="active">Biography</a>
+        <a href="images/cv.pdf" target="_blank" rel="noopener">CV</a>
+      </nav>
+
+      <div class="menu-toggle" role="button" aria-label="Toggle menu" aria-expanded="false" tabindex="0">&#9776;</div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       PAGE HEADER
+  ============================================================ -->
+  <section class="page-header">
+    <div class="container fade-up">
+      <p class="page-eyebrow">Biography</p>
+
+      <div class="bio-name-plate">
+        <span class="name-en">Sally Khaidem</span>
+        <span class="name-script" lang="mni-Mtei">ꯁꯥꯂꯤ ꯈꯥꯏꯗꯦꯝ</span>
+        <span class="name-script" lang="bn">শেলী খাইদেম</span>
+        <span class="name-script" lang="hi">शेली खाइदेम</span>
+      </div>
+
+      <h1 class="page-title">Who I am</h1>
+
+      <p class="reading">
+        I am a PhD candidate at the Indian Institute of Technology Madras, co-advised by
+        Prof. Kaushik Mitra and Dr. Mansi Sharma. Before IIT Madras, I completed my M.Tech at
+        NIT Manipur and my B.E. at BMS College of Engineering, Bengaluru.
+      </p>
+
+      <p class="reading" style="margin-top:1.25rem;">
+        I will complete my PhD in 2026 and am actively looking for postdoctoral and industrial
+        research opportunities in computer vision, computational imaging and intelligent visual
+        perception.
+      </p>
+
+      <p class="reading" style="margin-top:1.25rem;">
+        Beyond research, I enjoy reading novels, photography, badminton, swimming, cycling and
+        solo travel.
+      </p>
+
+      <p class="languages-row"><strong>Languages:</strong> Manipuri (Native), English (Fluent), Hindi (Fluent), Bengali (Fluent)</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EXPERIENCE
+  ============================================================ -->
+  <section id="experience">
+    <div class="container fade-up">
+
+      <div class="glass-card theme-block">
+        <h3 class="theme-block-title">Experience</h3>
+
+        <div class="entry">
+          <div class="entry-top">
+            <span class="entry-title">Project Technical Support</span>
+            <span class="entry-meta">Feb 2026 &ndash; Present</span>
+          </div>
+          <p class="entry-sub">IIT Madras &amp; ICMR&ndash;National Institute of Epidemiology (ICMR-NIE)</p>
+          <p>Contributing to an interdisciplinary research project on drone-based digital imaging for automated wildlife monitoring. Developing learning-based multimodal computer vision algorithms using synchronized RGB and thermal imagery for robust aerial detection, population counting and behavioural monitoring of Indian Flying Fox colonies.</p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-top">
+            <span class="entry-title">PrePARe PhD Intern</span>
+            <span class="entry-meta">Jul 2025 &ndash; Jan 2026</span>
+          </div>
+          <p class="entry-sub">Samsung Research Institute Bangalore (SRIB)</p>
+          <p>Designed and developed a video foundation model for video panoptic segmentation, enabling robust spatio-temporal scene understanding across diverse visual environments.</p>
+        </div>
+      </div>
+
+      <!-- ========================================================
+           EDUCATION
+      ======================================================== -->
+      <div class="glass-card theme-block">
+        <h3 class="theme-block-title">Education</h3>
+
+        <div class="entry">
+          <div class="entry-top">
+            <span class="entry-title">Ph.D. in Electrical Engineering</span>
+            <span class="entry-meta">2020 &ndash; Present</span>
+          </div>
+          <p class="entry-sub">Indian Institute of Technology Madras, Chennai, India &middot; CGPA 7.87/10</p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-top">
+            <span class="entry-title">M.Tech. in VLSI &amp; Embedded Systems</span>
+            <span class="entry-meta">2018 &ndash; 2020</span>
+          </div>
+          <p class="entry-sub">National Institute of Technology Manipur, Imphal, India &middot; CGPA 8.35/10</p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-top">
+            <span class="entry-title">B.E. in Electronics &amp; Communication Engineering</span>
+            <span class="entry-meta">2013 &ndash; 2017</span>
+          </div>
+          <p class="entry-sub">BMS College of Engineering, Bengaluru, India &middot; CGPA 8.37/10</p>
+        </div>
+      </div>
+
+      <!-- ========================================================
+           AWARDS & HONOURS
+      ======================================================== -->
+      <div class="glass-card theme-block">
+        <h3 class="theme-block-title">Honours &amp; Awards</h3>
+
+        <div class="award-list">
+          <div class="award-item">ANRF International Travel Support (ITS) Grant <span class="award-meta">&middot; 2025</span></div>
+          <div class="award-item">Institute Half-Time Research Assistantship (HTRA), IIT Madras <span class="award-meta">&middot; 2020&ndash;2025</span></div>
+          <div class="award-item">First Rank, M.Tech. in VLSI &amp; Embedded Systems <span class="award-meta">&middot; National Institute of Technology Manipur</span></div>
+          <div class="award-item">Qualified Graduate Aptitude Test in Engineering (GATE), Electronics &amp; Communication Engineering <span class="award-meta">&middot; 2019 and 2020</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2026 Sally Khaidem</p>
+      <div class="footer-links">
+        <a href="mailto:khaidemsally@gmail.com">Email</a>
+        <a href="https://scholar.google.com/citations?user=jx_fc4YAAAAJ&hl=en&authuser=1" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://github.com/sKhaidem" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/sally-khaidem-7914b257/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
