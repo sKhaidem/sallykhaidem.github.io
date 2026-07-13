@@ -245,10 +245,12 @@
 
 
 /* ==========================================================
-   Mobile (640px)
+   Navigation — switch to hamburger earlier (900px)
+   6 nav items don't comfortably fit in a horizontal row
+   below this width, even on tablets/large phones.
    ========================================================== */
 
-@media (max-width:640px){
+@media (max-width:900px){
 
     .nav-container{
 
@@ -261,7 +263,6 @@
         position:fixed;
 
         top:70px;
-
         right:-100%;
 
         width:260px;
@@ -271,7 +272,6 @@
         background:rgba(247,249,252,.96);
 
         backdrop-filter:blur(20px);
-
         -webkit-backdrop-filter:blur(20px);
 
         box-shadow:-10px 0 30px rgba(15,23,42,.08);
@@ -279,7 +279,6 @@
         flex-direction:column;
 
         justify-content:flex-start;
-
         align-items:flex-start;
 
         padding:2rem;
@@ -301,11 +300,9 @@
         display:flex;
 
         align-items:center;
-
         justify-content:center;
 
         width:42px;
-
         height:42px;
 
         cursor:pointer;
@@ -315,6 +312,15 @@
         color:var(--text-primary);
 
     }
+
+}
+
+
+/* ==========================================================
+   Mobile (640px)
+   ========================================================== */
+
+@media (max-width:640px){
 
     .hero-photo{
 
@@ -336,17 +342,13 @@
 
     .button-group{
 
-        width:100%;
-
-        flex-direction:column;
+        justify-content:center;
 
     }
 
     .contact-links{
 
-        flex-direction:column;
-
-        align-items:center;
+        justify-content:center;
 
     }
 
