@@ -1,701 +1,431 @@
 /* ==========================================================
-   COMPONENTS
+   RESPONSIVE DESIGN
    ========================================================== */
 
 
 /* ==========================================================
-   Navigation
+   Large Desktop (1400px+)
    ========================================================== */
 
-.navbar{
+@media (min-width:1400px){
 
-    position:fixed;
+    .container{
 
-    top:0;
-    left:0;
+        width:min(calc(100% - 4rem),var(--container-width));
 
-    width:100%;
-
-    z-index:1000;
-
-    transition:var(--transition);
-
-}
-
-.navbar.scrolled{
-
-    background:rgba(247,249,252,.82);
-
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
-
-    box-shadow:var(--elevation-1);
-
-}
-
-.nav-container{
-
-    width:min(calc(100% - 2rem),var(--container-width));
-
-    margin-inline:auto;
-
-    height:78px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-}
-
-.logo{
-
-    color:var(--text-primary);
-
-    font-size:1.25rem;
-
-    font-weight:700;
-
-    letter-spacing:-.03em;
-
-}
-
-.nav-links{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:2rem;
-
-}
-
-.nav-links a{
-
-    position:relative;
-
-    color:var(--text-secondary);
-
-    font-size:.95rem;
-
-    font-weight:500;
-
-}
-
-.nav-links a::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-    bottom:-6px;
-
-    width:100%;
-    height:2px;
-
-    background:var(--accent);
-
-    transform:scaleX(0);
-
-    transform-origin:left;
-
-    transition:var(--transition);
-
-}
-
-.nav-links a:hover{
-
-    color:var(--text-primary);
-
-}
-
-.nav-links a:hover::after{
-
-    transform:scaleX(1);
-
-}
-
-.menu-toggle{
-
-    display:none;
-
-    cursor:pointer;
+    }
 
 }
 
 
 
 /* ==========================================================
-   Hero
+   Laptop (1200px)
    ========================================================== */
 
-.hero{
+@media (max-width:1200px){
 
-    min-height:100vh;
+    .container{
 
-    display:flex;
+        width:min(calc(100% - 2rem),1100px);
 
-    align-items:center;
-
-    padding-top:90px;
-
-}
-
-.hero-photo{
-
-    width:min(100%,320px);
-
-    aspect-ratio:1;
-
-    margin-inline:auto;
-
-    border-radius:50%;
-
-    overflow:hidden;
-
-    box-shadow:var(--elevation-3);
-
-}
-
-.hero-photo img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-}
-
-.hero-content{
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-}
-
-.hero-name{
-
-    margin-bottom:.75rem;
-
-}
-
-.hero-title{
-
-    font-size:var(--fs-hero);
-
-    line-height:1.05;
-
-    letter-spacing:-.05em;
-
-    margin-bottom:1rem;
-
-}
-
-.hero-subtitle{
-
-    font-size:1.35rem;
-
-    color:var(--accent);
-
-    font-weight:600;
-
-    margin-bottom:1.5rem;
-
-}
-
-.hero-description{
-
-    margin-bottom:2rem;
-
-}
-
-.hero-affiliation{
-
-    margin-bottom:2rem;
-
-    color:var(--text-secondary);
+    }
 
 }
 
 
 
 /* ==========================================================
-   Buttons
+   Tablet Landscape (1024px)
    ========================================================== */
 
-.button-group{
+@media (max-width:1024px){
 
-    display:flex;
+    section{
 
-    flex-wrap:wrap;
+        padding:6rem 0;
 
-    gap:1rem;
+    }
 
-}
+    .grid{
 
-.btn{
+        grid-template-columns:repeat(6,minmax(0,1fr));
 
-    display:inline-flex;
+    }
 
-    align-items:center;
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-10,
+    .col-11,
+    .col-12{
 
-    justify-content:center;
+        grid-column:span 6;
 
-    gap:.5rem;
+    }
 
-    padding:.85rem 1.6rem;
+    .col-4{
 
-    border-radius:999px;
+        grid-column:span 6;
 
-    font-size:.95rem;
+    }
 
-    font-weight:600;
+    .col-3{
 
-    transition:var(--transition);
+        grid-column:span 3;
 
-    transform:translateY(0);
+    }
 
-}
+    .theme-card{
 
-.btn:hover{
+        grid-column:span 3;
 
-    transform:translateY(-2px);
+    }
 
-}
+    .publication-card{
 
-.btn-primary{
+        grid-column:span 6;
 
-    background:var(--accent);
+    }
 
-    color:#fff;
+    .project-card{
 
-}
+        grid-column:span 6;
 
-.btn-primary:hover{
+    }
 
-    background:var(--accent-hover);
+    .hero{
 
-    color:#fff;
+        min-height:auto;
 
-}
+        padding-top:140px;
 
-.btn-secondary{
+        padding-bottom:80px;
 
-    background:rgba(255,255,255,.6);
+    }
 
-    color:var(--text-primary);
+    .hero-photo{
 
-    border:1px solid rgba(255,255,255,.8);
+        width:260px;
 
-    backdrop-filter:blur(12px);
+        margin-bottom:2rem;
 
-    -webkit-backdrop-filter:blur(12px);
+    }
 
-}
+    .hero-content{
 
-.btn-secondary:hover{
+        text-align:center;
 
-    background:#fff;
+        align-items:center;
+
+    }
+
+    .hero-description{
+
+        margin-inline:auto;
+
+    }
 
 }
 
 
 
 /* ==========================================================
-   Section Heading
+   Tablet Portrait (768px)
    ========================================================== */
 
-.section-header{
+@media (max-width:768px){
 
-    margin-bottom:5rem;
+    html{
 
-}
+        font-size:15px;
 
-.section-title{
+    }
 
-    margin-bottom:1rem;
+    section{
 
-}
+        padding:5rem 0;
 
-.section-subtitle{
+    }
 
-    max-width:650px;
+    .grid{
+
+        grid-template-columns:1fr;
+
+        gap:2rem;
+
+    }
+
+    [class*="col-"]{
+
+        grid-column:1;
+
+    }
+
+    .theme-card,
+    .publication-card,
+    .project-card{
+
+        grid-column:1;
+
+    }
+
+    .section-header{
+
+        margin-bottom:3rem;
+
+    }
+
+    .hero{
+
+        min-height:auto;
+
+        padding-top:120px;
+
+        padding-bottom:60px;
+
+    }
+
+    .hero-content{
+
+        text-align:center;
+
+        align-items:center;
+
+    }
+
+    .hero-photo{
+
+        width:220px;
+
+    }
+
+    .hero-title{
+
+        font-size:clamp(2.3rem,8vw,3.2rem);
+
+    }
+
+    .hero-subtitle{
+
+        font-size:1.15rem;
+
+    }
+
+    .button-group{
+
+        justify-content:center;
+
+    }
+
+    .tag-group{
+
+        justify-content:center;
+
+    }
+
+    .publication-image,
+
+    .project-image{
+
+        margin:-2rem -2rem 1.5rem;
+
+    }
+
+    .footer-content{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
 
 }
 
 
 
 /* ==========================================================
-   Tags
+   Navigation — switch to hamburger earlier (900px)
+   6 nav items don't comfortably fit in a horizontal row
+   below this width, even on tablets/large phones.
    ========================================================== */
 
-.tag-group{
+@media (max-width:900px){
 
-    display:flex;
+    .nav-container{
 
-    flex-wrap:wrap;
+        height:70px;
 
-    gap:.75rem;
+    }
 
-    margin-top:2rem;
+    .nav-links{
+
+        position:fixed;
+
+        top:70px;
+        right:-100%;
+
+        width:260px;
+
+        height:calc(100vh - 70px);
+
+        background:rgba(247,249,252,.96);
+
+        backdrop-filter:blur(20px);
+        -webkit-backdrop-filter:blur(20px);
+
+        box-shadow:-10px 0 30px rgba(15,23,42,.08);
+
+        flex-direction:column;
+
+        justify-content:flex-start;
+        align-items:flex-start;
+
+        padding:2rem;
+
+        gap:1.5rem;
+
+        transition:.35s ease;
+
+    }
+
+    .nav-links.active{
+
+        right:0;
+
+    }
+
+    .menu-toggle{
+
+        display:flex;
+
+        align-items:center;
+        justify-content:center;
+
+        width:42px;
+        height:42px;
+
+        cursor:pointer;
+
+        font-size:1.5rem;
+
+        color:var(--text-primary);
+
+    }
 
 }
 
-.tag{
 
-    display:inline-flex;
+/* ==========================================================
+   Mobile (640px)
+   ========================================================== */
 
-    align-items:center;
+@media (max-width:640px){
 
-    justify-content:center;
+    .hero-photo{
 
-    padding:.55rem 1rem;
+        width:190px;
 
-    border-radius:999px;
+    }
 
-    background:var(--research);
+    .hero-title{
 
-    color:var(--accent);
+        font-size:2.2rem;
 
-    font-size:.9rem;
+    }
 
-    font-weight:600;
+    .btn{
+
+        width:100%;
+
+    }
+
+    .button-group{
+
+        justify-content:center;
+
+    }
+
+    .contact-links{
+
+        justify-content:center;
+
+    }
 
 }
 
 
 
 /* ==========================================================
-   Theme Cards
+   Small Phones (480px)
    ========================================================== */
 
-.card-grid{
+@media (max-width:480px){
 
-    display:grid;
+    html{
 
-    grid-template-columns:repeat(12,minmax(0,1fr));
+        font-size:14px;
 
-    gap:2rem;
+    }
 
-}
+    .container{
 
-.theme-card{
+        width:min(calc(100% - 1.5rem),100%);
 
-    grid-column:span 3;
+    }
 
-}
+    .hero{
 
-.theme-card h3{
+        padding-top:100px;
 
-    margin-bottom:1rem;
+    }
 
-}
+    .hero-photo{
 
-.theme-card p{
+        width:170px;
 
-    max-width:none;
+    }
+
+    .glass-card{
+
+        padding:1.5rem;
+
+    }
+
+    .publication-image,
+
+    .project-image{
+
+        margin:-1.5rem -1.5rem 1.25rem;
+
+    }
+
+    .footer-links{
+
+        flex-direction:column;
+
+        gap:.75rem;
+
+    }
 
 }
 
 
 
 /* ==========================================================
-   Publication Cards
+   Accessibility
    ========================================================== */
 
-.publication-grid{
+@media (prefers-reduced-motion:reduce){
 
-    display:grid;
+    *{
 
-    grid-template-columns:repeat(12,minmax(0,1fr));
+        animation:none !important;
 
-    gap:2rem;
+        transition:none !important;
 
-}
+        scroll-behavior:auto !important;
 
-.publication-card{
+    }
 
-    grid-column:span 4;
-
-    overflow:hidden;
-
-}
-
-.publication-image{
-
-    margin:-2rem -2rem 1.5rem;
-
-    overflow:hidden;
-
-}
-
-.publication-image img{
-
-    width:100%;
-
-    aspect-ratio:16/9;
-
-    object-fit:cover;
-
-    transition:.4s ease;
-
-}
-
-.publication-card:hover .publication-image img{
-
-    transform:scale(1.03);
-
-}
-
-.venue{
-
-    display:inline-block;
-
-    padding:.35rem .85rem;
-
-    margin-bottom:1rem;
-
-    border-radius:999px;
-
-    background:var(--publication);
-
-    color:#7C3AED;
-
-    font-size:.8rem;
-
-    font-weight:600;
-
-}
-
-.publication-links{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:1rem;
-
-    margin-top:1.5rem;
-
-}
-
-
-
-/* ==========================================================
-   Project Cards
-   ========================================================== */
-
-.project-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(12,minmax(0,1fr));
-
-    gap:2rem;
-
-}
-
-.project-card{
-
-    grid-column:span 4;
-
-}
-
-.project-image{
-
-    margin:-2rem -2rem 1.5rem;
-
-    overflow:hidden;
-
-}
-
-.project-image img{
-
-    width:100%;
-
-    aspect-ratio:16/9;
-
-    object-fit:cover;
-
-    transition:.4s ease;
-
-}
-
-.project-card:hover .project-image img{
-
-    transform:scale(1.03);
-
-}
-
-
-
-/* ==========================================================
-   Contact
-   ========================================================== */
-
-.contact-card{
-
-    text-align:center;
-
-}
-
-.contact-links{
-
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:1rem;
-
-    margin-top:2rem;
-
-}
-
-
-
-/* ==========================================================
-   Footer
-   ========================================================== */
-
-footer{
-
-    padding:4rem 0;
-
-    border-top:1px solid rgba(15,23,42,.06);
-
-}
-
-.footer-content{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:2rem;
-
-    flex-wrap:wrap;
-
-}
-
-.footer-links{
-
-    display:flex;
-
-    gap:1.5rem;
-
-}
-
-.footer-links a{
-
-    color:var(--text-secondary);
-
-}
-
-.footer-links a:hover{
-
-    color:var(--accent);
-
-}
-
-
-
-/* ==========================================================
-   Icon Links (Contact section + Footer)
-   ========================================================== */
-
-.icon-link{
-
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-
-    width:46px;
-    height:46px;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.6);
-
-    border:1px solid rgba(255,255,255,.8);
-
-    backdrop-filter:blur(12px);
-    -webkit-backdrop-filter:blur(12px);
-
-    color:var(--text-primary);
-
-    transition:var(--transition);
-
-}
-
-.icon-link svg{
-
-    width:20px;
-    height:20px;
-
-}
-
-.icon-link:hover{
-
-    background:#fff;
-
-    color:var(--accent);
-
-    transform:translateY(-2px);
-
-}
-
-.footer-icon-link{
-
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-
-    width:36px;
-    height:36px;
-
-    border-radius:50%;
-
-    color:var(--text-secondary);
-
-    transition:var(--transition);
-
-}
-
-.footer-icon-link svg{
-
-    width:18px;
-    height:18px;
-
-}
-
-.footer-icon-link:hover{
-
-    color:var(--accent);
-
-    background:rgba(79,125,243,.08);
-
-}
-
-
-/* ==========================================================
-   Fade Animation
-   Disabled as a visibility gate. Content is always visible
-   regardless of whether JS runs. (Previously this class hid
-   content until JS added .show — removed after it caused
-   blank pages when the script didn't load.)
-   ========================================================== */
-
-.fade-up{
-    opacity:1;
-    transform:none;
 }
