@@ -51,13 +51,30 @@
 
 .logo{
 
-    color:var(--text-primary);
+    display:inline-flex;
+    align-items:center;
 
-    font-size:1.25rem;
+    transition:var(--transition);
 
-    font-weight:700;
+}
 
-    letter-spacing:-.03em;
+.logo img{
+
+    height:38px;
+    width:auto;
+    display:block;
+
+}
+
+.navbar.scrolled .logo{
+
+    opacity:.55;
+
+}
+
+.logo:hover{
+
+    opacity:.8;
 
 }
 
