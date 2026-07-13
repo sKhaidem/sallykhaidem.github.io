@@ -54,15 +54,60 @@
     display:inline-flex;
     align-items:center;
 
+    gap:.65rem;
+
     transition:var(--transition);
 
 }
 
 .logo img{
 
-    height:38px;
+    height:34px;
     width:auto;
     display:block;
+
+}
+
+.logo-name{
+
+    display:flex;
+    flex-direction:column;
+
+    line-height:1.2;
+
+}
+
+.logo-name-en{
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    color:var(--text-primary);
+
+    letter-spacing:-.01em;
+
+}
+
+.logo-name-scripts{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:.35rem;
+
+}
+
+.logo-name-scripts .name-script{
+
+    font-size:.68rem;
+
+    font-weight:400;
+
+    color:var(--text-secondary);
+
+    opacity:.55;
 
 }
 
