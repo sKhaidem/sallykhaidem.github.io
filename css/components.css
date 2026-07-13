@@ -611,30 +611,13 @@ footer{
 
 /* ==========================================================
    Fade Animation
-   Content is visible by default. The reveal animation only
-   applies once JS has confirmed it's running (html.js) — if
-   JS fails to load for any reason, everything stays visible.
+   Disabled as a visibility gate. Content is always visible
+   regardless of whether JS runs. (Previously this class hid
+   content until JS added .show — removed after it caused
+   blank pages when the script didn't load.)
    ========================================================== */
 
 .fade-up{
     opacity:1;
     transform:none;
-}
-
-html.js .fade-up{
-
-    opacity:0;
-
-    transform:translateY(20px);
-
-    transition:.6s ease;
-
-}
-
-html.js .fade-up.show{
-
-    opacity:1;
-
-    transform:none;
-
 }
