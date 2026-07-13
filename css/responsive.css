@@ -1,0 +1,429 @@
+/* ==========================================================
+   RESPONSIVE DESIGN
+   ========================================================== */
+
+
+/* ==========================================================
+   Large Desktop (1400px+)
+   ========================================================== */
+
+@media (min-width:1400px){
+
+    .container{
+
+        width:min(calc(100% - 4rem),var(--container-width));
+
+    }
+
+}
+
+
+
+/* ==========================================================
+   Laptop (1200px)
+   ========================================================== */
+
+@media (max-width:1200px){
+
+    .container{
+
+        width:min(calc(100% - 2rem),1100px);
+
+    }
+
+}
+
+
+
+/* ==========================================================
+   Tablet Landscape (1024px)
+   ========================================================== */
+
+@media (max-width:1024px){
+
+    section{
+
+        padding:6rem 0;
+
+    }
+
+    .grid{
+
+        grid-template-columns:repeat(6,minmax(0,1fr));
+
+    }
+
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-10,
+    .col-11,
+    .col-12{
+
+        grid-column:span 6;
+
+    }
+
+    .col-4{
+
+        grid-column:span 6;
+
+    }
+
+    .col-3{
+
+        grid-column:span 3;
+
+    }
+
+    .theme-card{
+
+        grid-column:span 3;
+
+    }
+
+    .publication-card{
+
+        grid-column:span 6;
+
+    }
+
+    .project-card{
+
+        grid-column:span 6;
+
+    }
+
+    .hero{
+
+        min-height:auto;
+
+        padding-top:140px;
+
+        padding-bottom:80px;
+
+    }
+
+    .hero-photo{
+
+        width:260px;
+
+        margin-bottom:2rem;
+
+    }
+
+    .hero-content{
+
+        text-align:center;
+
+        align-items:center;
+
+    }
+
+    .hero-description{
+
+        margin-inline:auto;
+
+    }
+
+}
+
+
+
+/* ==========================================================
+   Tablet Portrait (768px)
+   ========================================================== */
+
+@media (max-width:768px){
+
+    html{
+
+        font-size:15px;
+
+    }
+
+    section{
+
+        padding:5rem 0;
+
+    }
+
+    .grid{
+
+        grid-template-columns:1fr;
+
+        gap:2rem;
+
+    }
+
+    [class*="col-"]{
+
+        grid-column:1;
+
+    }
+
+    .theme-card,
+    .publication-card,
+    .project-card{
+
+        grid-column:1;
+
+    }
+
+    .section-header{
+
+        margin-bottom:3rem;
+
+    }
+
+    .hero{
+
+        min-height:auto;
+
+        padding-top:120px;
+
+        padding-bottom:60px;
+
+    }
+
+    .hero-content{
+
+        text-align:center;
+
+        align-items:center;
+
+    }
+
+    .hero-photo{
+
+        width:220px;
+
+    }
+
+    .hero-title{
+
+        font-size:clamp(2.3rem,8vw,3.2rem);
+
+    }
+
+    .hero-subtitle{
+
+        font-size:1.15rem;
+
+    }
+
+    .button-group{
+
+        justify-content:center;
+
+    }
+
+    .tag-group{
+
+        justify-content:center;
+
+    }
+
+    .publication-image,
+
+    .project-image{
+
+        margin:-2rem -2rem 1.5rem;
+
+    }
+
+    .footer-content{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+}
+
+
+
+/* ==========================================================
+   Mobile (640px)
+   ========================================================== */
+
+@media (max-width:640px){
+
+    .nav-container{
+
+        height:70px;
+
+    }
+
+    .nav-links{
+
+        position:fixed;
+
+        top:70px;
+
+        right:-100%;
+
+        width:260px;
+
+        height:calc(100vh - 70px);
+
+        background:rgba(247,249,252,.96);
+
+        backdrop-filter:blur(20px);
+
+        -webkit-backdrop-filter:blur(20px);
+
+        box-shadow:-10px 0 30px rgba(15,23,42,.08);
+
+        flex-direction:column;
+
+        justify-content:flex-start;
+
+        align-items:flex-start;
+
+        padding:2rem;
+
+        gap:1.5rem;
+
+        transition:.35s ease;
+
+    }
+
+    .nav-links.active{
+
+        right:0;
+
+    }
+
+    .menu-toggle{
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+        width:42px;
+
+        height:42px;
+
+        cursor:pointer;
+
+        font-size:1.5rem;
+
+        color:var(--text-primary);
+
+    }
+
+    .hero-photo{
+
+        width:190px;
+
+    }
+
+    .hero-title{
+
+        font-size:2.2rem;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+    }
+
+    .button-group{
+
+        width:100%;
+
+        flex-direction:column;
+
+    }
+
+    .contact-links{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+}
+
+
+
+/* ==========================================================
+   Small Phones (480px)
+   ========================================================== */
+
+@media (max-width:480px){
+
+    html{
+
+        font-size:14px;
+
+    }
+
+    .container{
+
+        width:min(calc(100% - 1.5rem),100%);
+
+    }
+
+    .hero{
+
+        padding-top:100px;
+
+    }
+
+    .hero-photo{
+
+        width:170px;
+
+    }
+
+    .glass-card{
+
+        padding:1.5rem;
+
+    }
+
+    .publication-image,
+
+    .project-image{
+
+        margin:-1.5rem -1.5rem 1.25rem;
+
+    }
+
+    .footer-links{
+
+        flex-direction:column;
+
+        gap:.75rem;
+
+    }
+
+}
+
+
+
+/* ==========================================================
+   Accessibility
+   ========================================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}
