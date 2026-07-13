@@ -1,0 +1,364 @@
+/* ==========================================================
+   Sally Khaidem Academic Website
+   Global Design System
+   ========================================================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+/* ==========================================================
+   CSS Variables
+   ========================================================== */
+
+:root {
+
+    /* ---------- Layout ---------- */
+
+    --container-width: 1180px;
+    --content-width: 1080px;
+    --reading-width: 720px;
+
+
+    /* ---------- Spacing ---------- */
+
+    --space-xs: 0.5rem;      /* 8px */
+    --space-sm: 1rem;        /* 16px */
+    --space-md: 1.5rem;      /* 24px */
+    --space-lg: 2.5rem;      /* 40px */
+    --space-xl: 4rem;        /* 64px */
+    --space-2xl: 6rem;       /* 96px */
+    --space-3xl: 8rem;       /* 128px */
+
+
+    /* ---------- Typography ---------- */
+
+    --font-family: "Inter", sans-serif;
+
+    --fs-hero: clamp(2.8rem, 5vw, 4rem);
+    --fs-h1: clamp(2.3rem, 4vw, 3rem);
+    --fs-h2: clamp(1.9rem, 3vw, 2.3rem);
+    --fs-h3: clamp(1.3rem, 2vw, 1.5rem);
+
+    --fs-body: 1.125rem;
+    --fs-small: 0.95rem;
+
+    --line-height: 1.75;
+
+
+    /* ---------- Colors ---------- */
+
+    --background: #F7F9FC;
+
+    --text-primary: #1E293B;
+    --text-secondary: #64748B;
+
+    --accent: #4F7DF3;
+    --accent-hover: #2563EB;
+
+    /* Semantic Pastels */
+
+    --research: rgba(79,125,243,.10);
+    --publication: rgba(183,148,246,.10);
+    --project: rgba(52,211,153,.10);
+    --bio: rgba(251,191,36,.10);
+
+
+    /* ---------- Glass Cards ---------- */
+
+    --glass-bg: rgba(255,255,255,.60);
+
+    --glass-border: rgba(255,255,255,.70);
+
+    --glass-shadow:
+        0 8px 30px rgba(15,23,42,.05);
+
+    --glass-shadow-hover:
+        0 18px 45px rgba(15,23,42,.08);
+
+    --glass-blur: blur(18px);
+
+
+    /* ---------- Radius ---------- */
+
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 22px;
+    --radius-xl: 30px;
+
+
+    /* ---------- Transition ---------- */
+
+    --transition: .30s ease;
+
+}
+
+
+/* ==========================================================
+   Reset
+   ========================================================== */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:var(--font-family);
+
+    background:var(--background);
+
+    color:var(--text-primary);
+
+    line-height:var(--line-height);
+
+    font-size:var(--fs-body);
+
+    text-rendering:optimizeLegibility;
+
+    -webkit-font-smoothing:antialiased;
+
+}
+
+
+/* ==========================================================
+   Typography
+   ========================================================== */
+
+h1,h2,h3,h4{
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    color:var(--text-primary);
+
+}
+
+h1{
+
+    font-size:var(--fs-h1);
+
+}
+
+h2{
+
+    font-size:var(--fs-h2);
+
+    margin-bottom:var(--space-md);
+
+}
+
+h3{
+
+    font-size:var(--fs-h3);
+
+}
+
+p{
+
+    max-width:var(--reading-width);
+
+    color:var(--text-secondary);
+
+}
+
+strong{
+
+    color:var(--text-primary);
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================================
+   Links
+   ========================================================== */
+
+a{
+
+    color:var(--accent);
+
+    text-decoration:none;
+
+    transition:var(--transition);
+
+}
+
+a:hover{
+
+    color:var(--accent-hover);
+
+}
+
+
+/* ==========================================================
+   Images
+   ========================================================== */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+
+/* ==========================================================
+   Lists
+   ========================================================== */
+
+ul{
+
+    list-style:none;
+
+}
+
+
+/* ==========================================================
+   Layout
+   ========================================================== */
+
+.container{
+
+    width:min(100% - 2rem, var(--container-width));
+
+    margin-inline:auto;
+
+}
+
+.content{
+
+    width:min(100%, var(--content-width));
+
+    margin-inline:auto;
+
+}
+
+.reading{
+
+    max-width:var(--reading-width);
+
+}
+
+section{
+
+    padding:var(--space-3xl) 0;
+
+}
+
+
+/* ==========================================================
+   Glass Card
+   ========================================================== */
+
+.glass-card{
+
+    background:var(--glass-bg);
+
+    backdrop-filter:var(--glass-blur);
+
+    -webkit-backdrop-filter:var(--glass-blur);
+
+    border:1px solid var(--glass-border);
+
+    border-radius:var(--radius-lg);
+
+    box-shadow:var(--glass-shadow);
+
+    padding:2rem;
+
+    transition:var(--transition);
+
+}
+
+.glass-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--glass-shadow-hover);
+
+}
+
+
+/* ==========================================================
+   Utility Classes
+   ========================================================== */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.text-left{
+
+    text-align:left;
+
+}
+
+.flex{
+
+    display:flex;
+
+}
+
+.grid{
+
+    display:grid;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+.mt-sm{
+
+    margin-top:var(--space-sm);
+
+}
+
+.mt-md{
+
+    margin-top:var(--space-md);
+
+}
+
+.mt-lg{
+
+    margin-top:var(--space-lg);
+
+}
+
+.mb-sm{
+
+    margin-bottom:var(--space-sm);
+
+}
+
+.mb-md{
+
+    margin-bottom:var(--space-md);
+
+}
+
+.mb-lg{
+
+    margin-bottom:var(--space-lg);
+
+}
