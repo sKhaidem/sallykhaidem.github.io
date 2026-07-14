@@ -76,6 +76,14 @@
 
     }
 
+    .card-grid,
+    .publication-grid,
+    .project-grid{
+
+        grid-template-columns:repeat(6,minmax(0,1fr));
+
+    }
+
     .theme-card{
 
         grid-column:span 3;
@@ -153,6 +161,14 @@
         grid-template-columns:1fr;
 
         gap:2rem;
+
+    }
+
+    .card-grid,
+    .publication-grid,
+    .project-grid{
+
+        grid-template-columns:1fr;
 
     }
 
@@ -408,9 +424,9 @@
 
     .footer-links{
 
-        flex-direction:column;
+        justify-content:center;
 
-        gap:.75rem;
+        flex-wrap:wrap;
 
     }
 

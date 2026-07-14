@@ -209,8 +209,6 @@ p{
 
     color:var(--text-secondary);
 
-    max-width:var(--reading-width);
-
     text-align:justify;
 
     hyphens:auto;
