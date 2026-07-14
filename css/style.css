@@ -211,6 +211,10 @@ p{
 
     max-width:var(--reading-width);
 
+    text-align:justify;
+
+    hyphens:auto;
+
 }
 
 strong{
