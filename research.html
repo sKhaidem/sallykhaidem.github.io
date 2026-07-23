@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Research — Sally Khaidem</title>
-  <meta name="description" content="Research themes: event-based vision, computational imaging, neural rendering and intelligent visual perception.">
+  <meta name="description" content="Research themes, publications and projects in event-based vision, computational imaging, neural rendering and intelligent visual perception.">
   <link rel="icon" href="images/sangai.png" type="image/x-icon">
   <script>document.documentElement.classList.add("js");</script>
 
@@ -15,8 +15,7 @@
 
   <style>
     /* ----------------------------------------------------------
-       Page-specific additions (kept minimal — same pattern as
-       index.html)
+       Page-specific additions
     ---------------------------------------------------------- */
 
     .nav-links a.active{ color: var(--text-primary); }
@@ -47,10 +46,6 @@
       color: var(--text-secondary);
       font-weight: 600;
       font-size: .9rem;
-      transition: var(--transition);
-    }
-    .pipeline-step.is-active{
-      color: var(--text-primary);
     }
     .pipeline-arrow{
       color: var(--accent);
@@ -72,45 +67,99 @@
       margin-bottom: 2rem;
     }
 
-    .paper-list{
+    /* Unified work item — used for both papers and projects,
+       so nothing is ever listed twice under two different
+       formats. */
+    .work-list{
       display:flex;
       flex-direction:column;
-      gap: 1.25rem;
-      border-top: 1px solid rgba(15,23,42,.06);
-      padding-top: 1.5rem;
+      gap: 1.5rem;
+      border-top: 1px solid rgba(15,23,42,.08);
+      padding-top: 1.75rem;
     }
-    .paper-list-label{
-      font-size: .85rem;
-      font-weight: 600;
-      color: var(--text-secondary);
-      text-transform: uppercase;
-      letter-spacing: .04em;
-      margin-bottom: .5rem;
+    .work-item{
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(15,23,42,.06);
     }
-    .paper-item{
+    .work-list .work-item:last-child{
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .work-item-top{
       display:flex;
       justify-content: space-between;
       align-items: baseline;
       gap: 1rem;
       flex-wrap: wrap;
+      margin-bottom: .35rem;
     }
-    .paper-item .paper-title{
+    .work-item-title{
+      color: var(--text-primary);
+      font-weight: 600;
+      font-size: 1.02rem;
+    }
+    .work-item-meta{
+      font-size: .85rem;
+      color: var(--text-secondary);
+      white-space: nowrap;
+    }
+    .work-item-venue{
+      display:inline-block;
+      font-size: .75rem;
+      font-weight: 700;
+      color: var(--accent);
+      background: var(--research);
+      padding: .15rem .6rem;
+      border-radius: 999px;
+      margin-left: .5rem;
+      vertical-align: middle;
+    }
+    .work-item-authors{
+      font-size: .88rem;
+      color: var(--text-secondary);
+      margin-bottom: .5rem;
+    }
+    .work-item-authors .self{
       color: var(--text-primary);
       font-weight: 600;
     }
-    .paper-item .paper-venue{
-      color: var(--text-secondary);
-      font-size: .9rem;
-      white-space: nowrap;
+    .work-item p{
+      max-width: none;
+      margin-bottom: .5rem;
     }
-    .paper-item a.paper-link{
-      font-size: .9rem;
+    .work-item-links{
+      display:flex;
+      gap: 1rem;
+      margin-top: .5rem;
+    }
+    .work-item-links a{
+      font-size: .88rem;
       font-weight: 600;
+    }
+    .badge-accepted{
+      display:inline-block;
+      background: var(--publication);
+      color: #7C3AED;
+      font-size: .7rem;
+      font-weight: 700;
+      padding: .15rem .55rem;
+      border-radius: 999px;
+      margin-left: .4rem;
+      vertical-align: middle;
+    }
+
+    .early-research-note{
+      margin-top: -1rem;
+    }
+    .early-research-note p{
+      max-width: none;
+      font-size: .9rem;
+      color: var(--text-secondary);
     }
 
     @media (max-width:768px){
       .page-header{ padding-top:120px; }
-      .paper-item{ flex-direction:column; align-items:flex-start; gap:.35rem; }
+      .work-item-top{ flex-direction:column; gap:.3rem; }
     }
   </style>
 </head>
@@ -134,8 +183,6 @@
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="research.html" class="active">Research</a>
-        <a href="publications.html">Publications</a>
-        <a href="projects.html">Projects</a>
         <a href="biography.html">Biography</a>
         <a href="images/cv.pdf" target="_blank" rel="noopener">CV</a>
       </nav>
@@ -149,12 +196,13 @@
   ============================================================ -->
   <section class="page-header">
     <div class="container fade-up">
-      <!--
-      <p class="page-eyebrow">Research</p>
-      -->
       <h1 class="page-title">What I work on</h1>
       <p class="reading">
-        My research follows the journey of visual information from capture to understanding. It explores how visual data is sensed, represented, compressed, reconstructed, rendered, and ultimately interpreted by intelligent systems. The themes below correspond to the major stages of this pipeline.
+        My research follows the journey of visual information from capture to understanding.
+        It explores how visual data is sensed, represented, compressed, reconstructed, rendered
+        and ultimately interpreted by intelligent systems. Each theme below covers the problem,
+        the publications it has produced, and the projects &mdash; ongoing or completed &mdash;
+        built along the way.
       </p>
 
       <div class="pipeline">
@@ -190,26 +238,65 @@
           asynchronous data usable by standard vision pipelines.
         </p>
 
-        <div class="paper-list">
-          <p class="paper-list-label">Representative work</p>
+        <div class="work-list">
 
-          <div class="paper-item">
-            <span class="paper-title">Towards Efficient Neuromorphic Data Processing: A Novel Representation with Lossless Spatio-Temporal Compression</span>
-            <span class="paper-venue">VCIP 2025</span>
-            <a href="#" class="paper-link">Paper</a>
+          <div class="work-item">
+            <div class="work-item-top">
+              <span class="work-item-title">Towards Efficient Neuromorphic Data Processing: A Novel Representation with Lossless Spatio-Temporal Compression<span class="work-item-venue">VCIP 2025</span></span>
+              <span class="work-item-meta">Nov 2024 &ndash; Mar 2025</span>
+            </div>
+            <p class="work-item-authors"><span class="self">Khaidem, S.</span>, Dharmaraj, A.C. and Sharma, M.</p>
+            <p>A lossless spatio-temporal compression scheme for event data using a voxelized Super Binary Map and Temporal Event Vector with context-adaptive entropy coding.</p>
+            <div class="work-item-links">
+              <a href="#">Paper</a>
+              <a href="#">Code</a>
+            </div>
           </div>
 
-          <div class="paper-item">
-            <span class="paper-title">Lightweight and High-Speed Contextual Intensity Image Reconstruction from Event-Based Sensors with Adaptive FastDynamicNet</span>
-            <span class="paper-venue">JEI 2025</span>
-            <a href="#" class="paper-link">Paper</a>
+          <div class="work-item">
+            <div class="work-item-top">
+              <span class="work-item-title">Lightweight and High-Speed Contextual Intensity Image Reconstruction from Event-Based Sensors with Adaptive FastDynamicNet<span class="work-item-venue">JEI 2025</span></span>
+              <span class="work-item-meta">Jan 2024 &ndash; Nov 2024</span>
+            </div>
+            <p class="work-item-authors"><span class="self">Khaidem, S.</span>, Jangid, R. and Sharma, M.</p>
+            <p>A context-guided recurrent neural network (FastDynamicNet) for efficient event-to-image reconstruction from asynchronous event streams.</p>
+            <div class="work-item-links">
+              <a href="#">Paper</a>
+            </div>
           </div>
 
-          <div class="paper-item">
-            <span class="paper-title">High Resolution Multi-exposure Stereo Event-Intensity-Depth Database of Natural Scenes</span>
-            <span class="paper-venue">ICETA 2025</span>
-            <a href="#" class="paper-link">Paper</a>
+          <div class="work-item">
+            <div class="work-item-top">
+              <span class="work-item-title">High Resolution Multi-exposure Stereo Event-Intensity-Depth Database of Natural Scenes<span class="work-item-venue">ICETA 2025</span></span>
+              <span class="work-item-meta">2025</span>
+            </div>
+            <p class="work-item-authors"><span class="self">Khaidem, S.</span>, Choudhary, R., Sharma, M. and Sankarnarayan, B.</p>
+            <p>A high-resolution stereo event-intensity-depth dataset of natural scenes, captured across multiple exposures.</p>
+            <div class="work-item-links">
+              <a href="#">Paper</a>
+            </div>
           </div>
+
+          <div class="work-item">
+            <div class="work-item-top">
+              <span class="work-item-title">A Novel Approach for Neuromorphic Vision Data Compression Based on Deep Belief Network<span class="work-item-venue">ICVGIP 2023</span></span>
+              <span class="work-item-meta">Feb 2023 &ndash; Aug 2023</span>
+            </div>
+            <p class="work-item-authors"><span class="self">Khaidem, S.</span>, Nevatia, A. and Sharma, M.</p>
+            <p>A learning-based lossless compression framework for neuromorphic event streams using spatio-temporal representations and entropy coding.</p>
+            <div class="work-item-links">
+              <a href="#">Paper</a>
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div class="work-item-top">
+              <span class="work-item-title">Video Semantic Segmentation using Event Cameras</span>
+              <span class="work-item-meta">Mar 2026 &ndash; Ongoing</span>
+            </div>
+            <p>Investigating learning-based methods for event-driven semantic segmentation of dynamic video scenes.</p>
+          </div>
+
         </div>
 
       </div>
@@ -233,20 +320,81 @@
           displays.
         </p>
 
-        <div class="paper-list">
-          <p class="paper-list-label">Representative work</p>
+        <div class="work-list">
 
-          <div class="paper-item">
-            <span class="paper-title">A Deep Belief Network Approach to Scalable Compression of Light Field Data for Auto-Stereoscopic Displays</span>
-            <span class="paper-venue">BMVC 2024</span>
-            <a href="#" class="paper-link">Paper</a>
+          <div class="work-item">
+            <div class="work-item-top">
+              <span class="work-item-title">A Deep Belief Network Approach to Scalable Compression of Light Field Data for Auto-Stereoscopic Displays<span class="work-item-venue">BMVC 2024</span></span>
+              <span class="work-item-meta">Jul 2024 &ndash; Nov 2024</span>
+            </div>
+            <p class="work-item-authors"><span class="self">Khaidem, S.</span> and Sharma, M.</p>
+            <p>A learning-based compression framework for layered light-field displays using Deep Belief Networks and H.265 encoding.</p>
+            <div class="work-item-links">
+              <a href="#">Paper</a>
+              <a href="#">Code</a>
+            </div>
           </div>
 
-          <div class="paper-item">
-            <span class="paper-title">An Integrated Representation &amp; Compression Scheme Based on Convolutional Autoencoders with 4D-DCT Perceptual Encoding for High Dynamic Range Light Fields</span>
-            <span class="paper-venue">CICT 2024</span>
-            <a href="#" class="paper-link">Paper</a>
+          <div class="work-item">
+            <div class="work-item-top">
+              <span class="work-item-title">An Integrated Representation &amp; Compression Scheme Based on Convolutional Autoencoders with 4D-DCT Perceptual Encoding for High Dynamic Range Light Fields<span class="work-item-venue">CICT 2024</span></span>
+              <span class="work-item-meta">Jul 2024 &ndash; Nov 2024</span>
+            </div>
+            <p class="work-item-authors"><span class="self">Khaidem, S.</span> and Sharma, M.</p>
+            <p>A convolutional autoencoder with 4D-DCT perceptual encoding for efficient HDR light-field compression.</p>
+            <div class="work-item-links">
+              <a href="#">Paper</a>
+            </div>
           </div>
+
+          <div class="work-item">
+            <div class="work-item-top">
+              <span class="work-item-title">Hybrid Lightweight Encryption Framework for Light Field Displays Using CNN-Based Multiplicative Layer Encoding and HIGHT-HMAC-SHA256 Scheme<span class="work-item-venue">JEI 2026</span><span class="badge-accepted">Accepted</span></span>
+              <span class="work-item-meta">2026</span>
+            </div>
+            <p class="work-item-authors"><span class="self">Khaidem, S.</span>, Sharma, M. and Singh, A.</p>
+            <p>A lightweight CNN-based encryption scheme for light-field displays combining multiplicative layer encoding with HIGHT-HMAC-SHA256.</p>
+            <div class="work-item-links">
+              <a href="#">Paper</a>
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div class="work-item-top">
+              <span class="work-item-title">A Data-Driven Approach Based on Dynamic Mode Decomposition for Efficient Encoding of Dynamic Light Fields<span class="work-item-venue">CVPR Workshop 2023</span></span>
+              <span class="work-item-meta">Dec 2022 &ndash; Mar 2023</span>
+            </div>
+            <p class="work-item-authors">Ravishankar, J., <span class="self">Khaidem, S.</span> and Sharma, M.</p>
+            <p>A dynamic light-field codec using coded-aperture acquisition, Dynamic Mode Decomposition and HEVC compression.</p>
+            <div class="work-item-links">
+              <a href="#">Paper</a>
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div class="work-item-top">
+              <span class="work-item-title">A Hybrid Tucker-VQ Tensor Sketch Decomposition Model for Coding and Streaming Real World Light Fields Using Stack of Differently Focused Images<span class="work-item-venue">PRL 2022</span></span>
+              <span class="work-item-meta">Jan 2022 &ndash; Aug 2022</span>
+            </div>
+            <p class="work-item-authors">Ravishankar, J., Sharma, M. and <span class="self">Khaidem, S.</span></p>
+            <p>Tensor decomposition techniques for efficient coding and streaming of real-world light fields from focal stacks.</p>
+            <div class="work-item-links">
+              <a href="#">Paper</a>
+            </div>
+          </div>
+
+          <div class="work-item">
+            <div class="work-item-top">
+              <span class="work-item-title">A Novel Compression Scheme Based on Hybrid Tucker-Vector Quantization via Tensor Sketching for Dynamic Light Fields Acquired Through Coded Aperture Camera<span class="work-item-venue">IC3D 2021</span></span>
+              <span class="work-item-meta">Nov 2020 &ndash; Mar 2021</span>
+            </div>
+            <p class="work-item-authors">Ravishankar, J., Sharma, M. and <span class="self">Khaidem, S.</span></p>
+            <p>A real-time light-field compression pipeline using tensor sketching, vector quantization and HEVC encoding.</p>
+            <div class="work-item-links">
+              <a href="#">Paper</a>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -269,14 +417,29 @@
           handle motion blur and high dynamic range that conventional capture cannot resolve.
         </p>
 
-        <div class="paper-list">
-          <p class="paper-list-label">Representative work</p>
+        <div class="work-list">
 
-          <div class="paper-item">
-            <span class="paper-title">Blur to Brilliance: Neuromorphic Data Guided Deblurring and HDR Novel View Synthesis</span>
-            <span class="paper-venue">IEEE Access 2025</span>
-            <a href="#" class="paper-link">Paper</a>
+          <div class="work-item">
+            <div class="work-item-top">
+              <span class="work-item-title">Blur to Brilliance: Neuromorphic Data Guided Deblurring and HDR Novel View Synthesis<span class="work-item-venue">IEEE Access 2025</span></span>
+              <span class="work-item-meta">Nov 2024 &ndash; Jun 2025</span>
+            </div>
+            <p class="work-item-authors"><span class="self">Khaidem, S.</span>, Kumar, A.N., Sharma, M. and Mitra, K.</p>
+            <p>An event-guided framework for image deblurring and HDR novel view synthesis using NeRF and 3D Gaussian Splatting.</p>
+            <div class="work-item-links">
+              <a href="#">Paper</a>
+              <a href="#">Code</a>
+            </div>
           </div>
+
+          <div class="work-item">
+            <div class="work-item-top">
+              <span class="work-item-title">Event-Guided Novel View Synthesis and 4D Panoptic Segmentation</span>
+              <span class="work-item-meta">Jan 2026 &ndash; Ongoing</span>
+            </div>
+            <p>Investigating event-guided NeRF and 3D Gaussian Splatting for novel view synthesis and dynamic scene understanding with panoptic segmentation.</p>
+          </div>
+
         </div>
 
       </div>
@@ -284,7 +447,7 @@
   </section>
 
   <!-- ============================================================
-       THEME 4 — INTELLIGENT VISUAL PERCEPTION (UPDATED)
+       THEME 4 — INTELLIGENT VISUAL PERCEPTION
   ============================================================ -->
   <section id="intelligent-visual-perception">
     <div class="container fade-up">
@@ -300,18 +463,17 @@
           semantic understanding of dynamic scenes.
         </p>
 
-        <div class="paper-list">
-          <p class="paper-list-label">Related experience</p>
+        <div class="work-list">
 
-          <div class="paper-item">
-            <span class="paper-title">Video Foundation Models for Video Panoptic Segmentation &mdash; a video foundation model for depth estimation and video panoptic segmentation</span>
-            <span class="paper-venue">Samsung Research Institute Bangalore, Jul 2025 &ndash; Jan 2026</span>
+          <div class="work-item">
+            <div class="work-item-top">
+              <span class="work-item-title">Video Foundation Models for Video Panoptic Segmentation</span>
+              <span class="work-item-meta">Jul 2025 &ndash; Jan 2026</span>
+            </div>
+            <p class="work-item-authors">PrePARe PhD Intern, Samsung Research Institute Bangalore</p>
+            <p>A VideoMAE-based foundation model for depth estimation and video panoptic segmentation, enabling robust spatio-temporal scene understanding across diverse visual environments.</p>
           </div>
 
-          <div class="paper-item">
-            <span class="paper-title">Video Semantic Segmentation using Event Cameras</span>
-            <span class="paper-venue">Ongoing, Mar 2026 &ndash;</span>
-          </div>
         </div>
 
       </div>
@@ -319,18 +481,16 @@
   </section>
 
   <!-- ============================================================
-       FORWARD LINKS
+       EARLY RESEARCH
   ============================================================ -->
-  <section id="research-forward">
-    <div class="container fade-up">
-      <div class="glass-card contact-card">
-        <h2>See the work in more detail</h2>
-        <p style="margin-inline:auto;">Full publication list and project write-ups.</p>
-        <div class="contact-links">
-          <a href="publications.html" class="btn btn-primary">Publications</a>
-          <a href="projects.html" class="btn btn-secondary">Projects</a>
-        </div>
-      </div>
+  <section id="early-research">
+    <div class="container fade-up early-research-note">
+      <p>
+        Also published: <span class="self" style="color:var(--text-primary); font-weight:600;">Khaidem, S.</span>,
+        Keisham, P., Loitongbam, S. and Khumanthem, M., 2020. "Detection and Removal of Impulse Noise from
+        Colour Image Using Lagrange Interpolation and Centre Weighted Vector Median Filter,"
+        Journal of Advanced Research in Dynamical and Control Systems &mdash; early work outside my current research focus.
+      </p>
     </div>
   </section>
 
