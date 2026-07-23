@@ -55,19 +55,35 @@
 
     .pipeline{
       display:flex;
-      align-items:center;
+      width:100%;
       flex-wrap:wrap;
-      gap: 1rem;
+      border-radius: var(--radius-md);
+      overflow:hidden;
+      box-shadow: var(--elevation-1);
       margin-top: 3rem;
     }
-    .pipeline-step{
-      color: var(--text-primary);
-      font-weight: 600;
-      font-size: .95rem;
-    }
     .pipeline-arrow{
-      color: var(--accent);
-      font-weight: 400;
+      display:none;
+    }
+    .pipeline-step{
+      flex:1 1 16%;
+      min-width: 110px;
+      text-align:center;
+      padding: .9rem .5rem;
+      font-weight:600;
+      font-size:.85rem;
+      color: var(--text-primary);
+      transition: var(--transition);
+    }
+    .pipeline-step:nth-child(1){ background: rgba(79,125,243,.16); color: #1E40AF; }
+    .pipeline-step:nth-child(3){ background: rgba(124,58,237,.16); color: #5B21B6; }
+    .pipeline-step:nth-child(5){ background: rgba(79,125,243,.16); color: #1E40AF; }
+    .pipeline-step:nth-child(7){ background: rgba(124,58,237,.16); color: #5B21B6; }
+    .pipeline-step:nth-child(9){ background: rgba(79,125,243,.16); color: #1E40AF; }
+    .pipeline-step:nth-child(11){ background: rgba(124,58,237,.16); color: #5B21B6; }
+
+    @media (max-width:640px){
+      .pipeline-step{ flex-basis: 33.33%; font-size: .78rem; }
     }
 
     .publication-links a{
@@ -91,10 +107,6 @@
       max-width: none;
     }
 
-    @media (max-width:1024px){
-      .pipeline{ gap:.6rem; }
-      .pipeline-step{ font-size:.85rem; }
-    }
   </style>
 </head>
 <body>
