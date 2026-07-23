@@ -31,7 +31,7 @@
     --space-lg: 2.5rem;      /* 40px */
     --space-xl: 4rem;        /* 64px */
     --space-2xl: 6rem;       /* 96px */
-    --space-3xl: 8rem;       /* 128px */
+    --space-3xl: 5rem;       /* 80px (was 128px — trimmed for tighter section spacing) */
 
 
     /* ---------- Typography ---------- */
