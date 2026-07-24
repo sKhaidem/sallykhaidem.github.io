@@ -107,6 +107,35 @@
       max-width: none;
     }
 
+    .theme-card .tag{
+      font-size: .72rem;
+      padding: .3rem .65rem;
+    }
+    .theme-card .tag-group{
+      gap: .5rem;
+    }
+
+    /* Homepage-specific: tighter section rhythm than inner pages,
+       to keep the whole page closer to ~2 screen heights. */
+    #research-vision,
+    #research-themes,
+    #featured-publications,
+    #current-research,
+    #contact{
+      padding: 3rem 0;
+    }
+    .hero{
+      padding-top: 130px;
+      padding-bottom: 2.5rem;
+    }
+
+    #featured-publications .publication-card{
+      padding: 1.5rem;
+    }
+    #featured-publications .publication-image{
+      margin: -1.5rem -1.5rem 1.1rem;
+    }
+
   </style>
 </head>
 <body>
@@ -210,8 +239,8 @@
         <span class="tag">Vision Foundation Models</span>
       </div>
 
-      <p class="reading" style="margin-top:2rem;">
-        My research follows the visual information pipeline end to end. From how a scene is captured, represented, compressed and reconstructed. To how it is rendered and ultimately understood. Each theme below corresponds to a different stage of that pipeline.
+      <p class="reading" style="margin-top:1.5rem;">
+        My research follows the visual information pipeline end to end — from capture and representation through compression and reconstruction, to rendering and understanding.
       </p>
 
       <div class="pipeline">
@@ -249,22 +278,42 @@
 
         <div class="theme-card glass-card">
           <h3>Novel Visual Sensing</h3>
-          <p>Conventional cameras struggle under motion blur, low light and high dynamic range. I work on event cameras and hybrid sensing modalities that capture visual information conventional sensors miss.</p>
+          <p>Capturing visual information conventional cameras miss &mdash; motion blur, low light, high dynamic range &mdash; through event cameras and hybrid sensing.</p>
+          <div class="tag-group mt-sm">
+            <span class="tag">Event Cameras</span>
+            <span class="tag">Hybrid Sensing</span>
+            <span class="tag">HDR Capture</span>
+          </div>
         </div>
 
         <div class="theme-card glass-card">
           <h3>Computational Imaging</h3>
-          <p>Raw sensor data is rarely usable directly. I design representations and reconstruction pipelines that recover high-quality visual signals from sparse, noisy or unconventional capture.</p>
+          <p>Recovering high-quality visual signals from sparse, noisy or unconventional capture through learned compression and reconstruction.</p>
+          <div class="tag-group mt-sm">
+            <span class="tag">Compression</span>
+            <span class="tag">Reconstruction</span>
+            <span class="tag">Light-Field Imaging</span>
+          </div>
         </div>
 
         <div class="theme-card glass-card">
           <h3>Neural Rendering</h3>
-          <p>Turning captured and reconstructed data into renderable 3D scenes. I work with NeRF and 3D Gaussian Splatting to synthesize novel views, guided by event and multimodal cues.</p>
+          <p>Synthesizing novel views from captured data using NeRF and 3D Gaussian Splatting, guided by event and multimodal cues.</p>
+          <div class="tag-group mt-sm">
+            <span class="tag">NeRF</span>
+            <span class="tag">3D Gaussian Splatting</span>
+            <span class="tag">Novel View Synthesis</span>
+          </div>
         </div>
 
         <div class="theme-card glass-card">
           <h3>Intelligent Visual Perception</h3>
-          <p>The end goal of the pipeline is understanding. I study how vision foundation models and learned representations support robust, generalizable scene understanding.</p>
+          <p>Turning reconstructed scenes into robust, generalizable understanding using vision foundation models.</p>
+          <div class="tag-group mt-sm">
+            <span class="tag">Vision Foundation Models</span>
+            <span class="tag">Scene Understanding</span>
+            <span class="tag">Video Panoptic Segmentation</span>
+          </div>
         </div>
 
       </div>
@@ -356,58 +405,26 @@
             </h2>
 
             <p class="section-subtitle">
-                Current projects exploring intelligent visual perception through
-                multimodal sensing, neural rendering, and dynamic scene understanding.
-            </p>
-
-        </div>
-
-
-        <div class="glass-card current-research-list">
-
-            <div class="current-research-item">
-
-                <h3>
-                    Drone-Based Multimodal Wildlife Monitoring
-                </h3>
-
-                <p>
-                    Developing multimodal computer vision methods using synchronized
-                    RGB and thermal aerial imagery for wildlife detection,
-                    population counting, and behavioural monitoring.
-                </p>
-
-            </div>
-
-
-            <div class="current-research-item">
-
-                <h3>
-                    Event-Guided Dynamic Scene Understanding
-                </h3>
-
-                <p>
-                    Investigating event-guided neural rendering and 3D Gaussian
-                    Splatting for novel view synthesis, panoptic segmentation,
-                    and dynamic scene understanding.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <p class="section-subtitle mt-lg">
-            These projects reflect my broader research vision of developing
-            computational methods that transform visual information from
-            <strong>capture to understanding</strong>.
+            Actively evolving work spanning neural rendering, video understanding and multimodal sensing.
         </p>
+
+        </div>
+
+
+        <div class="glass-card">
+          <div class="tag-group">
+            <span class="tag">Event-Guided 3D Gaussian Splatting</span>
+            <span class="tag">Video Semantic Segmentation</span>
+            <span class="tag">4D Panoptic Scene Understanding</span>
+            <span class="tag">Multimodal Wildlife Monitoring</span>
+          </div>
+        </div>
 
 
         <div class="button-group mt-lg">
 
             <a href="research.html" class="btn btn-primary">
-                View All Projects
+                Explore Research
             </a>
 
         </div>
